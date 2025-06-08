@@ -2,8 +2,12 @@ import React from "react";
 import Card from "./components/Card";
 import Map from "./components/Map";
 import Header from "./components/Header";
+import useSensors from "./useSensors";
 
 function App() {
+  const { temp, umity, luz } = useSensors();
+  console.log("Render do App - temp:", temp, "umity:", umity, "luz:", luz);
+
   return (
     <div className="min-h-screen bg-gray-100">
       <Header />
@@ -19,8 +23,8 @@ function App() {
       <div className="flex justify-center items-center flex-wrap gap-4 p-4">
         {/* Coluna da esquerda */}
         <div className="flex flex-col gap-4">
-          <Card title="Temperatura" value="26" unit="°C" />
-          <Card title="Umidade" value="70" unit="%" />
+          <Card title="Temperatura" value={temp ?? "–"} unit="°C" />
+          <Card title="Umidade" value={umity ?? "–"} unit="%" />
         </div>
 
         {/* Mapa central */}
@@ -30,7 +34,7 @@ function App() {
 
         {/* Coluna da direita */}
         <div className="flex flex-col gap-4">
-          <Card title="Luminosidade" value="850" unit="lux" />
+          <Card title="Luminosidade" value={luz ?? "–"} unit="lux" />
           <Card title="Previsão" value="Chuva" unit="" />
         </div>
       </div>

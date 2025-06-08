@@ -11,11 +11,11 @@ const Header = ({ onLocationSelect }) => {
       image: "/images/Lago_Taboão_Bragança_Paulista.png",
     },
     {
-      label: "Ibirapuera",
-      value: "Parque Ibirapuera",
-      image: "/images/Parque_Ibirapuera.jpg",
+      label: "empty",
+      value: "empty",
+      image: "null",
     },
-    { label: "Belo Horizonte", value: "bh", image: "/images/bh.png" },
+    { label: "empty", value: "empty", image: "null" },
   ];
 
   const handleSelect = (location) => {
