@@ -2,7 +2,9 @@ import React from "react";
 import Card from "./components/Card";
 import Map from "./components/Map";
 import Header from "./components/Header";
-import useSensors from "./useSensors";
+import useSensors from "./hooks/useSensors";
+import LuminosidadeCard from "./components/LuminosidadeCard";
+import DicaCard from "./components/DicaCard";
 
 function App() {
   const { temp, umity, luz } = useSensors();
@@ -34,8 +36,8 @@ function App() {
 
         {/* Coluna da direita */}
         <div className="flex flex-col gap-4">
-          <Card title="Luminosidade" value={luz ?? "–"} unit="lux" />
-          <Card title="Previsão" value="Chuva" unit="" />
+          <LuminosidadeCard luz={luz} />
+          <DicaCard />
         </div>
       </div>
     </div>

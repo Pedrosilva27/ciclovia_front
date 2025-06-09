@@ -10,12 +10,6 @@ const Header = ({ onLocationSelect }) => {
       value: "Lago do Taboão",
       image: "/images/Lago_Taboão_Bragança_Paulista.png",
     },
-    {
-      label: "empty",
-      value: "empty",
-      image: "null",
-    },
-    { label: "empty", value: "empty", image: "null" },
   ];
 
   const handleSelect = (location) => {

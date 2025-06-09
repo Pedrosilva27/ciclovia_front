@@ -24,7 +24,7 @@ const useSensors = () => {
 
     fetchSensorData(); // Chama na montagem
 
-    const interval = setInterval(fetchSensorData, 10000); // Atualiza a cada 5s
+    const interval = setInterval(fetchSensorData, 60000); // Atualiza a cada 1 min
 
     return () => clearInterval(interval); // Limpa o intervalo ao desmontar
   }, []);
