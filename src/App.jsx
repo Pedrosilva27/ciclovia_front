@@ -25,8 +25,16 @@ function App() {
       <div className="flex justify-center items-center flex-wrap gap-4 p-4">
         {/* Coluna da esquerda */}
         <div className="flex flex-col gap-4">
-          <Card title="Temperatura" value={temp ?? "–"} unit="°C" />
-          <Card title="Umidade" value={umity ?? "–"} unit="%" />
+          <Card
+            title="Temperatura"
+            value={temp != null ? temp.toFixed(2) : "–"}
+            unit="°C"
+          />
+          <Card
+            title="Umidade"
+            value={umity != null ? umity.toFixed(2) : "–"}
+            unit="%"
+          />
         </div>
 
         {/* Mapa central */}
